@@ -1,26 +1,27 @@
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class Connection {
     final Socket socket;
     final Scanner in;
-    final PrintWriter out;
+    final PrintStream out;
 
-    Connection(Socket s) throws IOException {
+    Connection(Socket s, Scanner in2, PrintStream out2) throws IOException {
         socket = s;
-        in = new Scanner(s.getInputStream());
-        out = new PrintWriter(s.getOutputStream());
+        in = in2;
+        out = out2;
     }
 
-    public void listen() throws IOException {
-        //while (true) {
+    public void listen() throws IOException {Long l = Long.MIN_VALUE;
+        while (true) {
             //new Scanner(System.in).nextLine();
-            out.write("message is this");
-            out.flush();
+            out.println(l.toString());l++;
+            //out.flush();
+            //System.out.println(in.nextLine());
             
-        //}
+        }
     }
 
 }
