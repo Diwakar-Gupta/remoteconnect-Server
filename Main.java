@@ -47,7 +47,6 @@ public class Main {
         while (true) {
             final Socket socket = serverSocket.accept();
             System.out.println("connected");
-
             Mapper(socket);
         }
     }

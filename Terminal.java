@@ -13,6 +13,10 @@ public class Terminal {
         out = out2;
     }
 
-	public void listen() {
-	}
+    public void listen() {System.out.println("in terminal");
+var k = new Scanner(System.in);
+        while (true) {
+            out.print(k.nextLine());
+        }
+    }
 }

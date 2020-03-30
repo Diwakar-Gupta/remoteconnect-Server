@@ -14,12 +14,14 @@ public class Connection {
         out = out2;
     }
 
-    public void listen() throws IOException {Long l = Long.MIN_VALUE;
+    public void listen() throws IOException {
+        Long l = Long.MIN_VALUE;
+        System.out.println("in pc");
         while (true) {
             //new Scanner(System.in).nextLine();
             out.println(l.toString());l++;
             //out.flush();
-            //System.out.println(in.nextLine());
+            System.out.println(in.nextLine());
             
         }
     }
